@@ -5,11 +5,10 @@ from .forms import HeightWeightFillForm
 import json
 # Create your views here.
 
-#for htmx, contains form
+
 class BMICalculateSamePage(TemplateView):
     template_name = 'bmiresult.html'
 
-#for htmx 
 def calculate_bmi(request):
     persons_weight = request.GET.get('weight')
     persons_height = request.GET.get('height')
@@ -24,14 +23,5 @@ def calculate_bmi(request):
     if body_mass_index > 30.0:
         bmistatus = 'You are considered to be obese.'
     return render(request,'partials/bmiresult.html',{'bmi':body_mass_index,'bmistatus':bmistatus})
-
-
-#next step is to implement this using htmx and then with react frontend 
-
-'''
-Should be like the one for adding films. 
-The form template should be there with the form to calculate BMI and then a div below to show the result and also the BMI status. In the partials template, It should show ‘0.00’ if there’s no context, then when someone calculates using hx-get, send that request to the calculating view then return the results to partials and then load it.
-'''
-
 
 
