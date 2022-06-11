@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if bmi %}
+Your BMI is {{ bmi }} <br>
+{{ bmistatus }}
+{% else %}
+Your BMI is 0.00
+{% endif %}
+{% endblock content %}

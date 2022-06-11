@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form>
+  <input type='number' id='forweight' name='weight_val' placeholder='Weight'/>
+  <input type='number' name='height_val' id='forheight' placeholder='Height'/>
+  <button hx-get="{% url 'bmicalc' %}" hx-vals='js:{"weight":document.getElementById("forweight").value,"height":document.getElementById("forheight").value}' hx-target='#bmiresults' type='submit'> Calculate </button>
+</form>
+
+<div id='bmiresults'>
+  {% include 'partials/bmiresult.html' %}
+</div>
+
+{% endblock content %}

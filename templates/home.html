@@ -1,9 +1,10 @@
-<html>
-  <head>
-    <title> Calculate BMI </title>
-  </head>
-  <form action="{% url 'bmiresult' %}" method='get'>
-    {{ form.as_p }}
-    <input type='submit' value='submit'>
-  </form>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<head>
+  <title> Calculate BMI </title>
+</head>
+<form action="{% url 'bmiresult' %}" method='get'>
+  {{ form.as_p }}
+  <input type='submit' value='submit'>
+</form>
+{% endblock content %}
