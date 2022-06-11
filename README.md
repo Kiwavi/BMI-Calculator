@@ -1,7 +1,7 @@
 # BMI-Calculator
 
 A simple BMI Calculator made with django and htmx. This unleashes the power of htmx by returning BMI results without reloading or redirecting the page.    
-Setup the project bu first cloning it into a folder    
+Setup the project by first cloning it into a folder    
 `git clone https://github.com/Kiwavi/BMI-Calculator.git .`     
 Install the required packages    
 `pip install -r requirements.txt`    
